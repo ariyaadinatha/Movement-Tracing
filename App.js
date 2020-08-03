@@ -7,8 +7,8 @@ import TestScreen from "./app/screens/TestScreen";
 
 export default function App() {
   //return <WelcomeScreen />;
-  //return <MainScreen />;
-  return <TestScreen />;
+  return <MainScreen />;
+  //return <TestScreen />;
 }
 
 const styles = StyleSheet.create({
