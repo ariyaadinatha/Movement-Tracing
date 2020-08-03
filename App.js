@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import MainScreen from "./app/screens/MainScreen";

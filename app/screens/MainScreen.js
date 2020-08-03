@@ -1,4 +1,9 @@
 import React from "react";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { EvilIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 import {
   Image,
   StyleSheet,
@@ -14,53 +19,52 @@ function MainScreen(props) {
     <SafeAreaView style={styles.container}>
       <View style={styles.topHeader}>
         <View style={styles.topBar}>
-          <Image
-            style={styles.headerLogo}
-            source={require("../assets/logo/notification.png")}
-          />
+          <View style={styles.topBarNotification}>
+            <MaterialIcons name="notifications-none" size={24} color="black" />
+          </View>
         </View>
         <Text>Selamat datang, </Text>
-        <Text style={styles.title}> SPARTANS</Text>
-        <Text> Medan </Text>
+        <Text style={styles.title}>SPARTANS</Text>
+        <View style={styles.topDropdown}>
+          <View style={styles.topDropdownItem}>
+            <EvilIcons name="location" size={24} color="black" />
+            <Text style={styles.topDropdownText}> Medan </Text>
+          </View>
+        </View>
       </View>
-      <View style={styles.topStatus}>
-        <Text> Sabtu, 18 Juli 2020 </Text>
-        <View style={styles.statusRow}>
-          <View>
-            <Text style={styles.statusTitle}> Dikonfirmasi </Text>
-            <Text style={styles.statusNumber}> 83.130 </Text>
-          </View>
-          <View>
-            <Text style={styles.statusTitle}> Sembuh </Text>
-            <Text style={styles.statusNumber}> 41.834 </Text>
-          </View>
-          <View>
-            <Text style={styles.statusTitle}> Meninggal </Text>
-            <Text style={styles.statusNumber}> 3.957 </Text>
+      <View style={styles.topStatusBar}>
+        <View style={styles.topStatus}>
+          <Text style={{ marginLeft: 23 }}> Sabtu, 18 Juli 2020 </Text>
+          <View style={styles.statusRow}>
+            <View>
+              <Text style={styles.statusTitle}> Dikonfirmasi </Text>
+              <Text style={styles.statusNumber}> 83.130 </Text>
+            </View>
+            <View>
+              <Text style={styles.statusTitle}> Sembuh </Text>
+              <Text style={styles.statusNumber}> 41.834 </Text>
+            </View>
+            <View>
+              <Text style={styles.statusTitle}> Meninggal </Text>
+              <Text style={styles.statusNumber}> 3.957 </Text>
+            </View>
           </View>
         </View>
       </View>
       <View style={styles.topFeature}>
-        <View>
-          <Image
-            style={styles.logo}
-            source={require("../assets/logo/time.png")}
+        <View style={styles.topFeatureItem}>
+          <FontAwesome5 name="clock" size={40} color="dodgerblue" />
+          <MaterialIcons
+            name="chat-bubble-outline"
+            size={40}
+            color="dodgerblue"
           />
-          <Text> Perjalanan </Text>
+          <Feather name="heart" size={40} color="dodgerblue" />
         </View>
-        <View>
-          <Image
-            style={styles.logo}
-            source={require("../assets/logo/chat.png")}
-          />
-          <Text> Laporan </Text>
-        </View>
-        <View>
-          <Image
-            style={styles.logo}
-            source={require("../assets/logo/love.png")}
-          />
-          <Text> Status </Text>
+        <View style={styles.topFeatureItem}>
+          <Text style={styles.topFeatureText}> Perjalanan </Text>
+          <Text style={styles.topFeatureText}> Laporan </Text>
+          <Text style={styles.topFeatureText}> Status </Text>
         </View>
       </View>
 
@@ -84,27 +88,17 @@ function MainScreen(props) {
       </View>
 
       <View style={styles.botNavigation}>
-        <Image
-          style={styles.logo}
-          source={require("../assets/logo/home.png")}
-        />
-        <Image style={styles.logo} source={require("../assets/logo/add.png")} />
-        <Image
-          style={styles.logo}
-          source={require("../assets/logo/user.png")}
-        />
+        <MaterialCommunityIcons name="home-outline" size={35} color="black" />
+        <MaterialIcons name="add-circle-outline" size={35} color="black" />
+        <Feather name="user" size={35} color="black" />
       </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  bot: {
-    backgroundColor: "#fff",
-    flex: 1,
-  },
   botNews: {
-    flex: 0.4,
+    flex: 0.5,
     width: "100%",
   },
   botNavigation: {
@@ -116,7 +110,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   newsBody: {
@@ -133,18 +126,14 @@ const styles = StyleSheet.create({
     textAlign: "justify",
     padding: 5,
   },
-  top: {
-    backgroundColor: "dodgerblue",
-    flex: 1,
-    width: "100%",
-  },
   topHeader: {
     backgroundColor: "dodgerblue",
-    flex: 0.4,
+    flex: 0.3,
     width: "100%",
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
     padding: 5,
+    paddingLeft: 8,
   },
   headerLogo: {
     height: 30,
@@ -155,20 +144,51 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     justifyContent: "space-between",
   },
+  topBarNotification: {
+    backgroundColor: "#8ac2ff",
+    borderRadius: 15,
+    padding: 2,
+  },
+  topDropdown: {
+    backgroundColor: "#8ac2ff",
+    marginTop: 10,
+    padding: 3,
+    borderRadius: 15,
+  },
+  topDropdownItem: {
+    flexDirection: "row",
+  },
+  topDropdownText: {
+    color: "white",
+    fontWeight: "bold",
+  },
   topStatus: {
-    backgroundColor: "#fff",
-    flex: 0.2,
-    width: "100%",
     justifyContent: "space-evenly",
     padding: 5,
   },
-  topFeature: {
+  topStatusBar: {
     backgroundColor: "#fff",
-    flex: 0.3,
+    flex: 0.2,
     width: "100%",
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+  },
+  topFeature: {
+    paddingTop: 10,
+    backgroundColor: "#f5f5f5",
+    flex: 0.2,
+    width: "100%",
+    alignContent: "center",
+  },
+  topFeatureText: {
+    fontSize: 10,
+    paddingRight: 8,
+    color: "dodgerblue",
+  },
+  topFeatureItem: {
     flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
+    justifyContent: "space-around",
+    paddingLeft: 4,
   },
   statusRow: {
     flexDirection: "row",
@@ -179,6 +199,7 @@ const styles = StyleSheet.create({
   },
   statusTitle: {
     color: "dodgerblue",
+    fontWeight: "bold",
   },
   title: {
     fontWeight: "bold",
