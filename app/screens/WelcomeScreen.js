@@ -1,11 +1,14 @@
 import React from "react";
-import { Image, StyleSheet, Text, SafeAreaView } from "react-native";
+import { Image, StyleSheet, View, SafeAreaView } from "react-native";
+import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
     <SafeAreaView style={styles.container}>
       <Image fadeDuration={1500} source={require("../assets/logo/icon.png")} />
-      <Text> Movement Tracing App </Text>
+      <View style={styles.loginButton}>
+        <AppButton title="login" />
+      </View>
     </SafeAreaView>
   );
 }
@@ -16,6 +19,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  loginButton: {
+    width: "100%",
+    padding: 10,
+    paddingTop: 20,
   },
 });
 

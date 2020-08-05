@@ -7,8 +7,8 @@ import MainScreen from "./app/screens/MainScreen";
 import TestScreen from "./app/screens/TestScreen";
 
 export default function App() {
-  //return <WelcomeScreen />;
-  return <MainScreen />;
+  return <WelcomeScreen />;
+  //return <MainScreen />;
   //return <TestScreen />;
 }
 
