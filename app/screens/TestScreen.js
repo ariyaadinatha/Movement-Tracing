@@ -1,48 +1,36 @@
 import React from "react";
-import { Image, StyleSheet, Text, SafeAreaView } from "react-native";
-import DropDownPicker from "react-native-dropdown-picker";
-import Icon from "react-native-vector-icons/Feather";
+import { Text } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 
-function WelcomeScreen(props) {
+import Screen from "../components/Screen";
+
+// Percobaan buat navigation
+
+const Tweets = () => (
+  <Screen>
+    <Text> Tweets </Text>
+  </Screen>
+);
+
+const TweetDetails = () => (
+  <Screen>
+    <Text> Tweet Details </Text>
+  </Screen>
+);
+
+const Stack = createStackNavigator();
+const StackNavigator = () => (
+  <Stack.Navigato>
+    <Stack.Screen name="Tweets" component={Tweets} />
+    <Stack.Screen name="TweetDetails" component={TweetDetails} />
+  </Stack.Navigator>
+);
+
+export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <DropDownPicker
-        items={[
-          {
-            label: "UK",
-            value: "uk",
-            icon: () => <Icon name="flag" size={18} color="#900" />,
-          },
-          {
-            label: "France",
-            value: "france",
-            icon: () => <Icon name="flag" size={18} color="#900" />,
-          },
-        ]}
-        defaultValue={this.state.country}
-        containerStyle={{ height: 40 }}
-        style={{ backgroundColor: "#fafafa" }}
-        itemStyle={{
-          justifyContent: "flex-start",
-        }}
-        dropDownStyle={{ backgroundColor: "#fafafa" }}
-        onChangeItem={(item) =>
-          this.setState({
-            country: item.value,
-          })
-        }
-      />
-    </SafeAreaView>
+    <NavigationContainer>
+      <StackNavigator />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
-
-export default WelcomeScreen;

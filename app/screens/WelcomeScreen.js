@@ -10,13 +10,13 @@ import {
 import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
-  const [firstName, setFirstName] = useState("");
+  const [username, setUsername] = useState("");
   const [pWord, setPWord] = useState("");
   return (
     <SafeAreaView style={styles.container}>
       <Image fadeDuration={1500} source={require("../assets/logo/icon.png")} />
       <TextInput
-        onChangeText={(text) => setFirstName(text)}
+        onChangeText={(text) => setUsername(text)}
         placeholder="Username"
         style={styles.textInput}
       />

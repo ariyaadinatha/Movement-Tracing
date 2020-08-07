@@ -9,9 +9,9 @@ import TripScreen from "./app/screens/TripScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
-  return <WelcomeScreen />;
+  //return <WelcomeScreen />;
   //return <MainScreen />;
-  //return <TestScreen />;
+  return <TestScreen />;
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
 }

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { EvilIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+import * as Location from "expo-location";
+import * as Permissions from "expo-permissions";
 import {
   Image,
   StyleSheet,
@@ -12,9 +14,14 @@ import {
   SafeAreaView,
   View,
   Platform,
+  TouchableWithoutFeedback,
+  Modal,
+  Button,
 } from "react-native";
 
 function MainScreen(props) {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.topHeader}>
@@ -25,12 +32,21 @@ function MainScreen(props) {
         </View>
         <Text>Selamat datang, </Text>
         <Text style={styles.title}>SPARTANS</Text>
-        <View style={styles.topDropdown}>
-          <View style={styles.topDropdownItem}>
-            <EvilIcons name="location" size={24} color="black" />
-            <Text style={styles.topDropdownText}> Medan </Text>
-          </View>
-        </View>
+
+        <React.Fragment>
+          <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
+            <View style={styles.topDropdown}>
+              <View style={styles.topDropdownItem}>
+                <EvilIcons name="location" size={24} color="black" />
+                <Text style={styles.topDropdownText}> Medan </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+
+          <Modal visible={modalVisible} animationType="slide">
+            <Button title="Close" onPress={() => setModalVisible(false)} />
+          </Modal>
+        </React.Fragment>
       </View>
       <View style={styles.topStatusBar}>
         <View style={styles.topStatus}>
