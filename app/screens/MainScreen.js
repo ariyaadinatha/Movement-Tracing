@@ -17,6 +17,7 @@ import {
   TouchableWithoutFeedback,
   Modal,
   Button,
+  TouchableOpacity,
 } from "react-native";
 
 function MainScreen(props) {
