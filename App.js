@@ -7,11 +7,14 @@ import MainScreen from "./app/screens/MainScreen";
 import TestScreen from "./app/screens/TestScreen";
 import TripScreen from "./app/screens/TripScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ProfileScreen from "./app/screens/ProfileScreen";
+import ReportScreen from "./app/screens/ReportScreen";
+import StatusScreen from "./app/screens/StatusScreen";
 
 export default function App() {
   //return <WelcomeScreen />;
   //return <MainScreen />;
-  return <TestScreen />;
+  return <StatusScreen />;
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
 }

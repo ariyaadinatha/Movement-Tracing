@@ -21,7 +21,7 @@ const TweetDetails = () => (
 
 const Stack = createStackNavigator();
 const StackNavigator = () => (
-  <Stack.Navigato>
+  <Stack.Navigator>
     <Stack.Screen name="Tweets" component={Tweets} />
     <Stack.Screen name="TweetDetails" component={TweetDetails} />
   </Stack.Navigator>
