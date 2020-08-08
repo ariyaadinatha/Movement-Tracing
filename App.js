@@ -14,7 +14,7 @@ import StatusScreen from "./app/screens/StatusScreen";
 export default function App() {
   //return <WelcomeScreen />;
   //return <MainScreen />;
-  return <StatusScreen />;
+  return <ProfileScreen />;
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
 }

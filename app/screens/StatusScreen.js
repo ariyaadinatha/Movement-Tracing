@@ -28,7 +28,7 @@ export default class App extends Component {
                     style={{
                         borderBottomColor: "#3EC6FF",
                         borderBottomWidth: 3,
-                        marginHorizontal :'3%',borderRadius:4
+                        marginHorizontal :'13%',borderRadius:4
                     }}
                     />
             <View style={styles.atas}>
