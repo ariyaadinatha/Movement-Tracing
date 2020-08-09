@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   Image,
@@ -8,8 +7,7 @@ import {
   TextInput,
   Text,
   navigation,
-  navigate
-
+  navigate,
 } from "react-native";
 
 import AppButton from "../components/AppButton";
@@ -17,34 +15,42 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default class Login extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
       isError: false,
-    }
+    };
   }
+
+  /*     <TextInput
+onChangeText={(text) => username(text)}
+placeholder="Username"
+style={styles.textInput}
+/>
+<TextInput
+onChangeText={(text) => password(text)}
+secureTextEntry
+placeholder="Password"
+style={styles.textInput}
+/> */
+
   render() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Image fadeDuration={1500} source={require("../assets/logo/icon.png")} />
-      <TextInput
-        onChangeText={(text) => username(text)}
-        placeholder="Username"
-        style={styles.textInput}
-      />
-      <TextInput
-        onChangeText={(text) => password(text)}
-        secureTextEntry
-        placeholder="Password"
-        style={styles.textInput}
-      />
-      <TouchableOpacity style={styles.loginButton} onPress={() => this.props.navigation.navigate('Main')}  >
-        <AppButton title="login" />
-      </TouchableOpacity>
-    </SafeAreaView>
-  );
-}
+    return (
+      <SafeAreaView style={styles.container}>
+        <Image
+          fadeDuration={1500}
+          source={require("../assets/logo/icon.png")}
+        />
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={() => this.props.navigation.navigate("Main")}
+        >
+          <AppButton title="Get Started" />
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -71,8 +77,3 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-
-
-
-
-
