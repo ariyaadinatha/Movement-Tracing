@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   Image,
@@ -6,31 +7,44 @@ import {
   SafeAreaView,
   TextInput,
   Text,
-} from "react-native";
-import AppButton from "../components/AppButton";
+  navigation,
+  navigate
 
-function WelcomeScreen(props) {
-  const [username, setUsername] = useState("");
-  const [pWord, setPWord] = useState("");
+} from "react-native";
+
+import AppButton from "../components/AppButton";
+import { TouchableOpacity } from "react-native-gesture-handler";
+
+export default class Login extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: '',
+      password: '',
+      isError: false,
+    }
+  }
+  render() {
   return (
     <SafeAreaView style={styles.container}>
       <Image fadeDuration={1500} source={require("../assets/logo/icon.png")} />
       <TextInput
-        onChangeText={(text) => setUsername(text)}
+        onChangeText={(text) => username(text)}
         placeholder="Username"
         style={styles.textInput}
       />
       <TextInput
-        onChangeText={(text) => setPWord(text)}
+        onChangeText={(text) => password(text)}
         secureTextEntry
         placeholder="Password"
         style={styles.textInput}
       />
-      <View style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} onPress={() => this.props.navigation.navigate('Main')}  >
         <AppButton title="login" />
-      </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
+}
 }
 
 const styles = StyleSheet.create({
@@ -58,4 +72,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WelcomeScreen;
+
+
+
+

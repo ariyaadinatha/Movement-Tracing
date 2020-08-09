@@ -11,14 +11,23 @@ import ProfileScreen from "./app/screens/ProfileScreen";
 import ReportScreen from "./app/screens/ReportScreen";
 import StatusScreen from "./app/screens/StatusScreen";
 
+
+
 export default function App() {
-  //return <WelcomeScreen />;
+  //return <MainTabScreen/>
+  return <TestScreen/>;
+
   //return <MainScreen />;
   //return <ProfileScreen />;
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
-  return <TestScreen />;
+
 }
+
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -27,4 +36,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+
 });
+
+
+
