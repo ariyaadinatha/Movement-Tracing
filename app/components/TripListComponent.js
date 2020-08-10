@@ -7,13 +7,7 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
-import {
-  updateTripList,
-  deleteTripList,
-  queryAllTripLists,
-} from "../../databases/allShemas";
 
-import realm from "../../databases/allShemas";
 import Swipeout from "react-native-swipeout";
 
 import HeaderComponent from "./HeaderComponent";
@@ -84,10 +78,6 @@ export default class TripListComponent extends Component {
     this.state = {
       tripLists: [],
     };
-    this.reloadData();
-    realm.addListener("change", () => {
-      this.reloadData();
-    });
   }
 
   reloadData = () => {

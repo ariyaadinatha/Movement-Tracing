@@ -13,8 +13,6 @@ import PopupDialog, {
   DialogTitle,
 } from "react-native-popup-dialog";
 
-import { insertNewTripList, updateTripList } from "../../databases/allShemas";
-
 export default class PopupDialogComponent extends Component {
   constructor(props) {
     super(props);

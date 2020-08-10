@@ -19,15 +19,16 @@ import ReportScreen from "./app/screens/ReportScreen";
 import StatusScreen from "./app/screens/StatusScreen";
 import AddTrip from "./app/components/AddTrip";
 import TripListComponent from "./app/components/TripListComponent";
+import LocationScreen from "./app/screens/LocationScreen";
 
 export default function App() {
   //return <MainTabScreen/>
-  //return <TestScreen/>;
+  return <TestScreen />;
   //return <MainScreen />;
   //return <ProfileScreen />;
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
-  return <AddTrip />;
+  //return <LocationScreen />;
 }
 
 const styles = StyleSheet.create({
