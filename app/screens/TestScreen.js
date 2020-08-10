@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import { Text } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
@@ -12,13 +11,11 @@ import ProfileScreen from "./ProfileScreen";
 import ReportScreen from "./ReportScreen";
 import StatusScreen from "./StatusScreen";
 
-
 // Percobaan buat navigation
 
 const Tweets = () => (
   <Screen>
     <Text> Tweets </Text>
-
   </Screen>
 );
 
@@ -31,17 +28,15 @@ const TweetDetails = () => (
 const Stack = createStackNavigator();
 const StackNavigator = () => (
   <Stack.Navigator>
-  <Stack.Screen name="Welcome" component={WelcomeScreen}/>
+    <Stack.Screen name="Welcome" component={WelcomeScreen} />
     <Stack.Screen name="Main" component={MainScreen} />
     <Stack.Screen name="ListingDetails" component={ListingDetailsScreen} />
     <Stack.Screen name="Trip" component={TripScreen} />
     <Stack.Screen name="Profile" component={ProfileScreen} />
     <Stack.Screen name="Report" component={ReportScreen} />
     <Stack.Screen name="Status" component={StatusScreen} />
-
   </Stack.Navigator>
 );
-
 
 export default function App() {
   return (

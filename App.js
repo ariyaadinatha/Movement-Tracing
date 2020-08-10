@@ -1,7 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  AppRegistry,
+} from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import MainScreen from "./app/screens/MainScreen";
 import TestScreen from "./app/screens/TestScreen";
@@ -10,24 +17,18 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ProfileScreen from "./app/screens/ProfileScreen";
 import ReportScreen from "./app/screens/ReportScreen";
 import StatusScreen from "./app/screens/StatusScreen";
-
-
+import AddTrip from "./app/components/AddTrip";
+import TripListComponent from "./app/components/TripListComponent";
 
 export default function App() {
   //return <MainTabScreen/>
-  return <TestScreen/>;
-
+  //return <TestScreen/>;
   //return <MainScreen />;
   //return <ProfileScreen />;
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
-
+  return <AddTrip />;
 }
-
-
-
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -36,9 +37,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
-
 });
-
-
-

@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
+import AddTrip from "../components/AddTrip";
 
 const trip = [
   {
@@ -58,7 +59,6 @@ function TripScreen(props) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     flex: 1,
   },
   topHeader: {

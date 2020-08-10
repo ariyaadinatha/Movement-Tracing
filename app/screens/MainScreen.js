@@ -17,16 +17,8 @@ import {
   TouchableWithoutFeedback,
   Modal,
   Button,
-
-
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
-
-
-
-
-
-
 
 function MainScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -35,35 +27,38 @@ function MainScreen(props) {
     <SafeAreaView style={styles.container}>
       <View style={styles.topHeader}>
         <View style={styles.topBar}>
-          <View style={styles.topBarNotification}>
-            <MaterialIcons name="notifications-none" size={24} color="black" />
-          </View>
+          <React.Fragment>
+            <View style={styles.topBarNotification}>
+              <MaterialIcons
+                name="notifications-none"
+                size={24}
+                color="black"
+                onPress={() => setModalVisible(true)}
+              />
+            </View>
+            <Modal visible={modalVisible} animationType="slide">
+              <Button title="Close" onPress={() => setModalVisible(false)} />
+            </Modal>
+          </React.Fragment>
         </View>
         <Text>Selamat datang, </Text>
         <Text style={styles.title}>SPARTANS</Text>
 
-        <React.Fragment>
-          <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-            <View style={styles.topDropdown}>
-              <View style={styles.topDropdownItem}>
-                <EvilIcons name="location" size={24} color="black" />
-
-
-                <Text style={styles.topDropdownText}>  </Text>
-
-
-              </View>
+        <TouchableWithoutFeedback>
+          <View style={styles.topDropdown}>
+            <View style={styles.topDropdownItem}>
+              <EvilIcons name="location" size={24} color="black" />
+              <Text style={styles.topDropdownText}> </Text>
             </View>
-          </TouchableWithoutFeedback>
-
-          <Modal visible={modalVisible} animationType="slide">
-            <Button title="Close" onPress={() => setModalVisible(false)} />
-          </Modal>
-        </React.Fragment>
+          </View>
+        </TouchableWithoutFeedback>
       </View>
       <View style={styles.topStatusBar}>
         <View style={styles.topStatus}>
-          <Text style={{ marginLeft: 23 }}> Sabtu, 18 Juli 2020 </Text>
+          <Text style={{ marginLeft: 5, fontWeight: "bold" }}>
+            {" "}
+            Sabtu, 18 Desember 2020{" "}
+          </Text>
           <View style={styles.statusRow}>
             <View>
               <Text style={styles.statusTitle}> Dikonfirmasi </Text>
@@ -81,36 +76,24 @@ function MainScreen(props) {
         </View>
       </View>
 
-
       <View style={styles.topFeature1}>
-      <TouchableOpacity onPress={() => props.navigation.navigate('Trip')}>
-      <Feather name="heart" size={40} color="dodgerblue" />
-      <Text style={styles.topFeatureText}> Perjalanan </Text>
-   
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.navigation.navigate('Report')} >
-        
-      <MaterialIcons
-
-
+        <TouchableOpacity onPress={() => props.navigation.navigate("Trip")}>
+          <Feather name="heart" size={40} color="dodgerblue" />
+          <Text style={styles.topFeatureText}> Perjalanan </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Report")}>
+          <MaterialIcons
             name="chat-bubble-outline"
             size={40}
             color="dodgerblue"
           />
 
-
           <Text style={styles.topFeatureText}> Laporan </Text>
-        
-      </TouchableOpacity >
-      <TouchableOpacity onPress={() => props.navigation.navigate('Status')}>
-      <Feather name="heart" size={40} color="dodgerblue" />
-      <Text style={styles.topFeatureText}> Status </Text>
-      </TouchableOpacity>
-
-
-      
-
-
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Status")}>
+          <Feather name="heart" size={40} color="dodgerblue" />
+          <Text style={styles.topFeatureText}> Status </Text>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.botNews}>
@@ -118,11 +101,17 @@ function MainScreen(props) {
           <Text style={styles.title}> Lorem Ipsum </Text>
           <Text
             style={styles.newsArticle}
-            numberOfLines={5}
+            numberOfLines={11}
             ellipsizeMode="tail"
           >
             {" "}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            fringilla facilisis finibus. Nam convallis velit sed massa ornare
+            luctus. Donec accumsan mi non orci luctus accumsan. Sed aliquam
+            fermentum erat sit amet tincidunt. Morbi et eros dictum,
+            pellentesque magna sit amet, euismod justo. Sed pharetra quam a
+            venenatis hendrerit. Sed vel eleifend augue, eget luctus arcu. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             fringilla facilisis finibus. Nam convallis velit sed massa ornare
             luctus. Donec accumsan mi non orci luctus accumsan. Sed aliquam
             fermentum erat sit amet tincidunt. Morbi et eros dictum,
@@ -132,30 +121,20 @@ function MainScreen(props) {
         </View>
       </View>
 
-
-<View style={styles.botNavigation} >
-      <TouchableOpacity onPress={() => props.navigation.navigate('Main')} >
-        <MaterialCommunityIcons name="home-outline" size={35} color="black" />
-   
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.navigation.navigate('Status')} >
-        
-        <MaterialIcons name="add-circle-outline" size={35} color="black" />
-        
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.navigation.navigate('Profile')}>
-        <Feather name="user" size={35} color="black" />
-      </TouchableOpacity>
-</View>      
-
-
+      <View style={styles.botNavigation}>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Main")}>
+          <MaterialCommunityIcons name="home-outline" size={35} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Status")}>
+          <MaterialIcons name="add-circle-outline" size={35} color="black" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}>
+          <Feather name="user" size={35} color="black" />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
-
-
-
-
 
 const styles = StyleSheet.create({
   botNews: {
@@ -168,9 +147,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-
-
-    
   },
   botNavigation1: {
     flex: 0.2,
@@ -178,12 +154,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-
-
   },
   container: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   newsBody: {
     backgroundColor: "dodgerblue",
@@ -254,7 +227,6 @@ const styles = StyleSheet.create({
     alignContent: "center",
   },
 
-
   topFeature1: {
     flex: 0.2,
     width: "100%",
@@ -263,20 +235,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-
   topFeatureText: {
     fontSize: 10,
     paddingRight: 8,
     color: "dodgerblue",
   },
 
-
   topFeatureItem1: {
     flexDirection: "row",
     justifyContent: "space-around",
     paddingLeft: 4,
     flexDirection: "row",
-
   },
   statusRow: {
     flexDirection: "row",

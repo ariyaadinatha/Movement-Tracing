@@ -44,7 +44,7 @@ style={styles.textInput}
         />
         <TouchableOpacity
           style={styles.loginButton}
-          onPress={() => this.props.navigation.navigate("Main")}
+          onPress={() => this.props.navigation.push("Main")}
         >
           <AppButton title="Get Started" />
         </TouchableOpacity>

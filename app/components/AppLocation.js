@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 
-export default class App extends React.Component {
+export default class AppLocation extends React.Component {
   place = {
     location: null,
     geocode: null,
