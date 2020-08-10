@@ -53,11 +53,11 @@ Visual Studio Code - Editor kode program
 
 ## Sumber
 https://docs.expo.io/
-https://www.youtube.com/watch?v=0-S5a0eXPoc
-https://www.youtube.com/watch?v=UcWG2o2gVzw
-https://www.youtube.com/watch?v=KytduDMW_7o
-https://www.youtube.com/watch?v=bV7cLu7WL78
-https://tecadmin.net/get-current-date-time-javascript/
+https://www.youtube.com/watch?v=0-S5a0eXPoc ;
+https://www.youtube.com/watch?v=UcWG2o2gVzw ;
+https://www.youtube.com/watch?v=KytduDMW_7o ;
+https://www.youtube.com/watch?v=bV7cLu7WL78 ;
+https://tecadmin.net/get-current-date-time-javascript/ ;
 dan lain lain
 
 
