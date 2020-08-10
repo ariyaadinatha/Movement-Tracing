@@ -35,17 +35,21 @@ Visual Studio Code - Editor kode program
 
 ## 12 - Kelompok 12
 
-Feralezer Leonard Gorga Tampubolon (16519059), Readme
-Mochammad Fatchur Rochman (16519083), Readme
-Gregorius Dimas Baskara (16519111), UI/UX Layar Profil, Laporan, dan Status
-Ramadhana Bhanuharya Wishnumurti (16519142), adjusting button supaya compatible sama navigation dan buat navigation antar screen
-Arjuna Marcelino (16519163), Readme
-Mgs. Tabrani (16519171), Readme
-Pandu Puncak Prawira (16519173), Readme
-Leonardus James Wang (16519241), Readme
-Harith Fakhri Setyawan (16519269), Readme
-Ariya Adinatha (16519524), Backend + Frontend + sisa fiturnya
-Ghifari Farras Azhar (16519528),  Readme
+1. Feralezer Leonard Gorga Tampubolon (16519059), Readme
+2. Mochammad Fatchur Rochman (16519083), Readme
+3. Gregorius Dimas Baskara (16519111), UI/UX Layar Profil, Laporan, dan Status
+4. Ramadhana Bhanuharya Wishnumurti (16519142), adjusting button supaya compatible sama navigation dan buat navigation antar screen
+5. Arjuna Marcelino (16519163), Readme
+6. Mgs. Tabrani (16519171), Readme
+7. Pandu Puncak Prawira (16519173), Readme
+8. Leonardus James Wang (16519241), Readme
+9. Harith Fakhri Setyawan (16519269), Readme
+10. Ariya Adinatha (16519524), Backend + Frontend + sisa fiturnya
+11. Ghifari Farras Azhar (16519528),  Readme
+
+## Sumber
+https://www.youtube.com/watch?v=0-S5a0eXPoc
+
 
 
 
