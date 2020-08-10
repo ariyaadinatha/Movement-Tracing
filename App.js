@@ -20,6 +20,8 @@ import StatusScreen from "./app/screens/StatusScreen";
 import AddTrip from "./app/components/AddTrip";
 import TripListComponent from "./app/components/TripListComponent";
 import LocationScreen from "./app/screens/LocationScreen";
+import AppLocation from "./app/components/AppLocation";
+import LocationApp from "./app/screens/LocationApp";
 
 export default function App() {
   //return <MainTabScreen/>
@@ -29,6 +31,8 @@ export default function App() {
   //return <TripScreen />;
   //return <ListingDetailsScreen />;
   //return <LocationScreen />;
+  //return <AppLocation />;
+  //return <LocationApp />;
 }
 
 const styles = StyleSheet.create({

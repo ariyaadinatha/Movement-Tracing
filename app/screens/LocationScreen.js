@@ -11,6 +11,27 @@ import {
 import Header from "../components/LocationHeader";
 import Footer from "../components/LocationFooter";
 
+var today = new Date();
+var time =
+  today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var weekday = new Array(7);
+weekday[0] = "Minggu";
+weekday[1] = "Senin";
+weekday[2] = "Selasa";
+weekday[3] = "Rabu";
+weekday[4] = "Kamis";
+weekday[5] = "Jumat";
+weekday[6] = "Sabtu";
+var n = weekday[today.getDay()];
+var date =
+  n +
+  ", " +
+  today.getDate() +
+  "-" +
+  (today.getMonth() + 1) +
+  "-" +
+  today.getFullYear();
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -85,8 +106,11 @@ export default class App extends React.Component {
           style={styles.trip}
           onPress={() => this.removeTrip(i)}
         >
-          <Text style={styles.tripText}>{trip}</Text>
-          <Text style={styles.tripText}> skas </Text>
+          <Text style={styles.tripText}>
+            {" "}
+            {date} - {time}{" "}
+          </Text>
+          <Text> {trip} </Text>
         </TouchableOpacity>
       );
     });

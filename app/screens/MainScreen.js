@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { EvilIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+import LocationApp from "./LocationApp";
+import GetLocation from "react-native-get-location";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 import {
@@ -22,6 +24,27 @@ import {
 
 function MainScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
+
+  var today = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Minggu";
+  weekday[1] = "Senin";
+  weekday[2] = "Selasa";
+  weekday[3] = "Rabu";
+  weekday[4] = "Kamis";
+  weekday[5] = "Jumat";
+  weekday[6] = "Sabtu";
+  var n = weekday[today.getDay()];
+  var date =
+    n +
+    ", " +
+    today.getDate() +
+    "-" +
+    (today.getMonth() + 1) +
+    "-" +
+    today.getFullYear();
+
+  //beres
 
   return (
     <SafeAreaView style={styles.container}>
@@ -48,17 +71,14 @@ function MainScreen(props) {
           <View style={styles.topDropdown}>
             <View style={styles.topDropdownItem}>
               <EvilIcons name="location" size={24} color="black" />
-              <Text style={styles.topDropdownText}> </Text>
+              <Text style={styles.topDropdownText}></Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
       </View>
       <View style={styles.topStatusBar}>
         <View style={styles.topStatus}>
-          <Text style={{ marginLeft: 5, fontWeight: "bold" }}>
-            {" "}
-            Sabtu, 18 Desember 2020{" "}
-          </Text>
+          <Text style={{ marginLeft: 5, fontWeight: "bold" }}> {date} </Text>
           <View style={styles.statusRow}>
             <View>
               <Text style={styles.statusTitle}> Dikonfirmasi </Text>
@@ -98,25 +118,25 @@ function MainScreen(props) {
 
       <View style={styles.botNews}>
         <View style={styles.newsBody}>
-          <Text style={styles.title}> Lorem Ipsum </Text>
+          <Text style={styles.title}> Berita </Text>
           <Text
             style={styles.newsArticle}
             numberOfLines={11}
             ellipsizeMode="tail"
           >
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            fringilla facilisis finibus. Nam convallis velit sed massa ornare
-            luctus. Donec accumsan mi non orci luctus accumsan. Sed aliquam
-            fermentum erat sit amet tincidunt. Morbi et eros dictum,
-            pellentesque magna sit amet, euismod justo. Sed pharetra quam a
-            venenatis hendrerit. Sed vel eleifend augue, eget luctus arcu. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            fringilla facilisis finibus. Nam convallis velit sed massa ornare
-            luctus. Donec accumsan mi non orci luctus accumsan. Sed aliquam
-            fermentum erat sit amet tincidunt. Morbi et eros dictum,
-            pellentesque magna sit amet, euismod justo. Sed pharetra quam a
-            venenatis hendrerit. Sed vel eleifend augue, eget luctus arcu.{" "}
+            Gugus Tugas Percepatan Penanganan Covid-19 Kabupaten Bandung kembali
+            melaporkan update penanganan kasus virus corona (Covid-19). Hingga
+            Minggu 9 Agustus 2020 pukul 12.00 WIB, total kasus konfirmasi atau
+            positif Covid-19 di Kabupaten Bandung mencapai 250 kasus. Artinya
+            terdapat penambahan sebanyak 15 kasus dari kemarin yang berjumlah
+            235 kasus. Dari 250 konfirmasi Covid-19, 85 diantaranya berstatus
+            dalam proses perawatan, 158 pasien dinyatakan sembuh, sedangkan 7
+            lainnya dinyatakan meninggal dunia. Sementara itu kasus suspek
+            proses berjumlah 28, discarded mencapai 2.200, probable 26, dan
+            kontak erat proses berjumlah 125. Dalam rilis yang diterima,
+            proporsi kasus konfirmasi positif Covid-19 di Kabupaten Bandung
+            menurut jenis kelamin didominasi oleh laki-laki sebesar 53%{" "}
           </Text>
         </View>
       </View>
@@ -125,7 +145,7 @@ function MainScreen(props) {
         <TouchableOpacity onPress={() => props.navigation.navigate("Main")}>
           <MaterialCommunityIcons name="home-outline" size={35} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.navigation.navigate("Status")}>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Location")}>
           <MaterialIcons name="add-circle-outline" size={35} color="black" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => props.navigation.navigate("Profile")}>

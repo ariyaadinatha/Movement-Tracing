@@ -10,6 +10,7 @@ import ListingDetailsScreen from "./ListingDetailsScreen";
 import ProfileScreen from "./ProfileScreen";
 import ReportScreen from "./ReportScreen";
 import StatusScreen from "./StatusScreen";
+import LocationScreen from "./LocationScreen";
 
 // Percobaan buat navigation
 
@@ -31,10 +32,11 @@ const StackNavigator = () => (
     <Stack.Screen name="Welcome" component={WelcomeScreen} />
     <Stack.Screen name="Main" component={MainScreen} />
     <Stack.Screen name="ListingDetails" component={ListingDetailsScreen} />
-    <Stack.Screen name="Trip" component={TripScreen} />
+    <Stack.Screen name="Trip" component={LocationScreen} />
     <Stack.Screen name="Profile" component={ProfileScreen} />
     <Stack.Screen name="Report" component={ReportScreen} />
     <Stack.Screen name="Status" component={StatusScreen} />
+    <Stack.Screen name="Location" component={LocationScreen} />
   </Stack.Navigator>
 );
 

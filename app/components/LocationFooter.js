@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
         <View style={styles.footerInner}>
           <TouchableOpacity
             style={styles.btn}
-            onPress={() => this.props.onNoteAdd()}
+            onPress={() => this.props.onTripAdd()}
           >
             <Text style={styles.btnText}>+</Text>
           </TouchableOpacity>
@@ -50,18 +50,18 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   btn: {
-    top: -50,
+    top: -35,
     zIndex: 1,
     position: "absolute",
-    right: 20,
-    width: 70,
-    height: 70,
-    borderRadius: 50,
+    right: 25,
+    width: 90,
+    height: 90,
+    borderRadius: 45,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 2,
     borderColor: "#fff",
-    backgroundColor: "#fa3664",
+    backgroundColor: "dodgerblue",
   },
   btnText: {
     color: "#fff",
