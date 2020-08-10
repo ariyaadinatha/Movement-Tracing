@@ -4,12 +4,13 @@
 
 >Note: kalau ga sempat dibuat, dikasih 2 user dummy aja
 
-3. Fungsi tambahPerjalanan
-4. Profile Screen -> UI/UX, fungsi belom kelar
-5. Fitur Laporan -> UI/UX, fungsi belom kelar
-6. Fitur Status -> UI/UX, fungsi belom kelar
-7. Fitur Perjalanan -> lagi dikerjain, Jumat, 7 Agustus
-8. Dropdown location -> lagi dikerjain. Jumat, 7 Agustus
+3. Fungsi tambahPerjalanan -> lagi dikerjain
+4. Profile Screen -> kelar
+5. Fitur Laporan -> kelar
+6. Fitur Status -> kelar
+7. Fitur Perjalanan -> kelar
+8. Dropdown location -> kelar
+9. Fungsi Map -> belom kelar
 
 
 # Movement-Tracing
