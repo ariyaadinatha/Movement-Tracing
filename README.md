@@ -22,6 +22,11 @@ Untuk menjalankan frontend aplikasi sendiri menggunakan smartphone yang dimiliki
 Clone git dari respository ke local, lalu di command prompt ketik “cd Movement-Tracing”. Lalu ketik npm start untuk menyalakan server.
 Setelah server expo di komputer sudah nyala, gunakan handphone dan buka aplikasi Expo. Cek bila komputer dan handphone sudah terhubung ke jaringan wifi yang sama, lalu gunakan aplikasi expo di handphone untuk scan qrcode yang ada di komputer.
 
+1. jalankan perintah 'git clone https://github.com/ariyaadinatha/Movement-Tracing.git' pada terminal
+2. pindah ke directory project 'cd Movement-Tracing'
+3. intall dependencies yang diperlukan 'npm install'
+4. menjalankan server 'npm start'
+
 
 ## DEPLOYMENT
 Untuk men-deploy app ke mobile phone, maka perlu dilakukan command tertentu di command prompt masing-masing agar dari Expo/Android Emulator yang dipakai dapat menunjukkan aplikasi yang dibuat. Hal yang sama dapat dilakukan untuk setiap screen/file javascript yang ada di folder aplikasi, sebagai salah satu cara untuk mengetes setiap bagian file aplikasi.
